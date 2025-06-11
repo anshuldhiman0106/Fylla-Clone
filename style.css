@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Syne:wght@400..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: "Roboto Mono", serif;
+  --font-sync: "Syne", serif;
+
+  /* --animate-marque: 1s linear infinite both;
+  @keyframes wiggle {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: rotate(-100%);
+    }
+  } */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .marque {
+  animation: marquee 10s linear delay infinite both fill-mode;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-51.8%);
+  }
+}
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+}
+
+.animate-marquee img {
+  width: 60px;
+  height: max-content;
+}
+
+/* Default (Light Theme) */
+body {
+  background: white;
+  color: black;
+  transition: background 0.5s, color 0.5s;
+}
+
+.dark {
+  background: #121212;
+  color: white;
+}
+
+
+
+.justifystart {
+  justify-content: start;
+  background-color: rgb(0, 0, 0);
+}
+.justifyend {
+  justify-content: end;
+  background-color: rgb(255, 255, 255);
+
+}
+
+
+
+/* Toggle Button Styles */
+
+.toggle.light .circle {
+  transform: translateX(0);
+}
+
+.toggle.dark .circle {
+  transform: translateX(40px);
+}
